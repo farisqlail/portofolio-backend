@@ -13,6 +13,7 @@ label {
   width: 45px;
   height: 22px;
   margin-top: 10px;
+  margin-left: 10px;
   border: 2px solid;
   border-radius: 20px;
 }
@@ -38,7 +39,7 @@ body.night {
 }
 
 .navbar {
-  padding-left: 215px;
+  padding-left: 220px;
   padding-right: 215px;
 }
 
@@ -72,12 +73,10 @@ body.night {
 #home h2 {
   font-weight: 600;
 }
-
-@media (max-width: 640px){
-  #home {
-    padding-top: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
+@media (max-width: 950px){
+  #home{
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 
@@ -88,9 +87,49 @@ body.night {
   }
 }
 
+@media (max-width: 640px){
+  #home {
+    padding-top: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#blog {
+  padding-top: 80px;
+  padding-left: 240px;
+  padding-right: 240px;
+  display:inline-block;
+  align-items: center;
+}
+
+#blog h2 {
+  font-weight: 600;
+}
+
+#blog h3 {
+  font-weight: 600;
+}
+
 @media (max-width: 950px){
-  #home{
+  #blog{
+    padding-top: 20px;
     padding-right: 30px;
-    padding-left: 30px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px){
+  #blog{
+    padding-right: 0px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px){
+  #blog {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
