@@ -20,6 +20,10 @@ body {
   color: #e6e6e6;
 }
 
+.navbar-brand {
+  color: #222;
+}
+
 .text {
   color: #222;
 }

@@ -1952,6 +1952,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("View mounted.");
@@ -1971,6 +1988,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -2016,6 +2034,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("View mounted.");
@@ -2035,6 +2054,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2167,15 +2201,15 @@ __webpack_require__.r(__webpack_exports__);
     component: _views_Home__WEBPACK_IMPORTED_MODULE_0__.default
   }, {
     path: '/blog',
-    name: 'pages.blog',
+    name: 'blog',
     component: _views_Blog__WEBPACK_IMPORTED_MODULE_1__.default
   }, {
     path: '/kontak',
-    name: 'pages.kontak',
+    name: 'kontak',
     component: _views_Kontak__WEBPACK_IMPORTED_MODULE_2__.default
   }, {
     path: '/portofolio',
-    name: 'pages.portofolio',
+    name: 'portofolio',
     component: _views_Portofolio__WEBPACK_IMPORTED_MODULE_3__.default
   }]
 });
@@ -20734,22 +20768,16 @@ var render = function() {
       _c("div", { staticClass: "container-fluid" }, [
         _c(
           "a",
-          { staticClass: "navbar-brand" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "nav-link",
-                attrs: {
-                  "aria-current": "page",
-                  exact: "",
-                  to: { name: "home" }
-                }
-              },
-              [_vm._v("Faris")]
-            )
-          ],
-          1
+          {
+            staticClass: "navbar-brand",
+            attrs: {
+              "data-aos": "zoom-in",
+              "data-aos-duration": "1000",
+              exact: "",
+              to: { name: "home" }
+            }
+          },
+          [_vm._v("Faris Rizqilail")]
         ),
         _vm._v(" "),
         _vm._m(0),
@@ -20764,7 +20792,10 @@ var render = function() {
             _c("div", { staticClass: "navbar-nav" }, [
               _c(
                 "li",
-                { staticClass: "nav-link" },
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-aos": "zoom-in", "data-aos-duration": "1500" }
+                },
                 [
                   _c(
                     "router-link",
@@ -20773,7 +20804,30 @@ var render = function() {
                       attrs: {
                         "aria-current": "page",
                         exact: "",
-                        to: { name: "pages.blog" }
+                        to: { name: "home" }
+                      }
+                    },
+                    [_vm._v("Beranda")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-aos": "zoom-in", "data-aos-duration": "2000" }
+                },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        "aria-current": "page",
+                        exact: "",
+                        to: { name: "blog" }
                       }
                     },
                     [_vm._v("Blog")]
@@ -20784,7 +20838,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "li",
-                { staticClass: "nav-link" },
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-aos": "zoom-in", "data-aos-duration": "2500" }
+                },
                 [
                   _c(
                     "router-link",
@@ -20793,7 +20850,7 @@ var render = function() {
                       attrs: {
                         "aria-current": "page",
                         exact: "",
-                        to: { name: "pages.portofolio" }
+                        to: { name: "portofolio" }
                       }
                     },
                     [_vm._v("Portofolio")]
@@ -20804,7 +20861,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "li",
-                { staticClass: "nav-link" },
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-aos": "zoom-in", "data-aos-duration": "3000" }
+                },
                 [
                   _c(
                     "router-link",
@@ -20813,7 +20873,7 @@ var render = function() {
                       attrs: {
                         "aria-current": "page",
                         exact: "",
-                        to: { name: "pages.kontak" }
+                        to: { name: "kontak" }
                       }
                     },
                     [_vm._v("Kontak")]
@@ -20826,7 +20886,12 @@ var render = function() {
                 "span",
                 {
                   staticClass: "icon",
-                  attrs: { onclick: "setDarkMode()", id: "darkBtn" }
+                  attrs: {
+                    "data-aos": "zoom-in",
+                    "data-aos-duration": "3500",
+                    onclick: "setDarkMode()",
+                    id: "darkBtn"
+                  }
                 },
                 [_vm._v("\n                        🌓\n                    ")]
               )
@@ -20891,6 +20956,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container" }, [
       _c("section", { attrs: { id: "blog" } }, [
         _c("h2", [_vm._v("\n            Tulisan\n        ")]),
+        _vm._v(" "),
         _c("br"),
         _c("br"),
         _vm._v(" "),
@@ -20902,7 +20968,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "mt-3" }, [
           _vm._v(
-            "\n            Halo pada tulisan ini saya ingin menshare sedikit tentang ilmu yang saya dapat selama saya mendalami\n            bidang Front-end Web Development. Dalam artikel ini saya akan fokus membahas tentang front-end\n            development saja ya :).\n        "
+            "\n            Halo pada tulisan ini saya ingin menshare sedikit tentang ilmu\n            yang saya dapat selama saya mendalami bidang Front-end Web\n            Development. Dalam artikel ini saya akan fokus membahas tentang\n            front-end development saja ya :).\n        "
           )
         ]),
         _vm._v(" "),
@@ -20913,6 +20979,34 @@ var staticRenderFns = [
             attrs: {
               href:
                 "https://farisrizqilail.medium.com/berkenalan-dengan-frontend-development-baeb58a44de5"
+            }
+          },
+          [_vm._v("Baca selengkapnya")]
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Menjadi Programmer Mulai Dari Mana ?")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "text-muted mt-1 mb-3" }, [
+          _vm._v("Sinopsis")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "mt-3" }, [
+          _vm._v(
+            "\n           Halo semua pada tulisan kali ini saya ingin sharing sedikit tentang bagaimana saya memilih jalan dalam dunia programming. Disini saya juga masih belajar untuk menjadi programmer yang baik hehe.\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "text-muted",
+            attrs: {
+              href:
+                "https://farisrizqilail.medium.com/menjadi-programmer-mulai-dari-mana-e6193f3e4504"
             }
           },
           [_vm._v("Baca selengkapnya")]
@@ -21005,6 +21099,11 @@ var staticRenderFns = [
         _c("h5", [
           _vm._v("Linkedin: "),
           _c("span", { staticClass: "text-muted" }, [_vm._v("Faris Rizqilail")])
+        ]),
+        _vm._v(" "),
+        _c("h5", [
+          _vm._v("github: "),
+          _c("span", { staticClass: "text-muted" }, [_vm._v("@farisqlail")])
         ])
       ])
     ])
@@ -21123,6 +21222,32 @@ var staticRenderFns = [
                 attrs: { href: "https://kawalcovid19.id/" }
               },
               [_vm._v("kawalcovid19")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "port" }, [
+          _c(
+            "a",
+            {
+              staticClass: "text",
+              attrs: {
+                href: "https://github.com/faris110900/covid",
+                target: "blank"
+              }
+            },
+            [_c("h3", [_vm._v("SRIKANDI v2")])]
+          ),
+          _vm._v(" "),
+          _c("span", { staticClass: "text-muted mt-1 mb-3" }, [
+            _vm._v("Deskripsi")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "mt-3" }, [
+            _vm._v(
+              "\n                Disini saya bekerja sebagai freelance backend developer dengan mengembangkan API yang dibutuhkan untuk proses pengembangana website.\n            "
             )
           ])
         ]),

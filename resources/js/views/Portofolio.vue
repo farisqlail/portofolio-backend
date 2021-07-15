@@ -55,6 +55,21 @@
                 </p>
             </div>
             <br />
+
+            <div class="port">
+                <a
+                    href="https://github.com/faris110900/covid"
+                    class="text"
+                    target="blank"
+                >
+                    <h3>SRIKANDI v2</h3>
+                </a>
+                <span class="text-muted mt-1 mb-3">Deskripsi</span>
+                <p class="mt-3">
+                    Disini saya bekerja sebagai freelance backend developer dengan mengembangkan API yang dibutuhkan untuk proses pengembangana website.
+                </p>
+            </div>
+            <br />
         </section>
     </div>
 </template>

@@ -16,19 +16,19 @@ export default {
 
         {
             path: '/blog',
-            name: 'pages.blog',
+            name: 'blog',
             component: Blog
         },
 
         {
             path: '/kontak',
-            name: 'pages.kontak',
+            name: 'kontak',
             component: Kontak
         },
 
         {
             path: '/portofolio',
-            name: 'pages.portofolio',
+            name: 'portofolio',
             component: Portofolio
         },
     ]
