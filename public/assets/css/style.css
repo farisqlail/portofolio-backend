@@ -1,0 +1,244 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.darkmode{
+  background-color: #222;
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.darkmode .navbar .navbar-brand{
+  color: #e6e6e6;
+}
+
+.darkmode .navbar .navbar-nav .nav-link{
+  color: #e6e6e6;
+}
+
+.darkmode .text {
+  color: #e6e6e6;
+}
+
+.navbar-brand {
+  color: #222;
+}
+
+.text {
+  color: #222;
+}
+
+label {
+  /* position: absolute; */
+  width: 45px;
+  height: 22px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+label:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #111;
+  transition: 0.4s;
+}
+
+label.active:before {
+  background: #fff;
+}
+
+body.night {
+  background: #111;
+  color: #fff !important;
+}
+
+.navbar {
+  padding-left: 340px;
+  padding-right: 330px;
+}
+
+@media (max-width: 640px){
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px){
+  .navbar{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 950px){
+  .navbar{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+#home {
+  padding: 240px;
+  display:inline-block;
+  align-items: center;
+}
+
+#home h2 {
+  font-weight: 600;
+}
+@media (max-width: 950px){
+  #home{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px){
+  #home{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px){
+  #home {
+    padding-top: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#blog {
+  padding-top: 50px;
+  padding-left: 230px;
+  padding-right: 240px;
+  display:inline-block;
+  align-items: center;
+}
+
+#blog h2 {
+  font-weight: 600;
+}
+
+#blog h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 950px){
+  #blog{
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px){
+  #blog{
+    padding-right: 0px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px){
+  #blog {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#porto {
+  padding-top: 50px;
+  padding-left: 230px;
+  padding-right: 240px;
+  display:inline-block;
+  align-items: center;
+}
+
+#porto h2 {
+  font-weight: 600;
+}
+
+#porto h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 950px){
+  #porto{
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px){
+  #porto{
+    padding-right: 0px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px){
+  #porto {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#kontak {
+  padding-top: 50px;
+  padding-left: 230px;
+  padding-right: 240px;
+  display:inline-block;
+  align-items: center;
+}
+
+#kontak h2 {
+  font-weight: 600;
+}
+
+#kontak h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 950px){
+  #kontak{
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px){
+  #kontak{
+    padding-right: 0px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px){
+  #kontak {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.icon {
+  margin-top: 16px;
+  padding-left: 8px;
+}
+
+@media (max-width: 640px){
+  .icon {
+    padding-left: 0;
+  }
+}
