@@ -28,6 +28,10 @@ body {
   color: #222;
 }
 
+.darkmode #blog a {
+  color: #fff;
+}
+
 label {
   /* position: absolute; */
   width: 45px;
@@ -123,18 +127,18 @@ body.night {
 
 #blog {
   padding-top: 50px;
-  padding-left: 230px;
+  padding-left: 260px;
   padding-right: 240px;
   display:inline-block;
   align-items: center;
 }
 
-#blog h2 {
+#blog h3 {
   font-weight: 600;
 }
 
-#blog h3 {
-  font-weight: 600;
+#blog a {
+  color: #000;
 }
 
 @media (max-width: 950px){

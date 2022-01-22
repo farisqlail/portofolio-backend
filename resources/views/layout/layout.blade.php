@@ -43,10 +43,13 @@
                         <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Beranda</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
                     <li class="nav-item" style="margin-top: -10px">
                         <button class="icon" onclick="setDarkMode()" id="darkBtn">
