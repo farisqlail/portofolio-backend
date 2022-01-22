@@ -84,6 +84,12 @@ body.night {
   }
 }
 
+.icon {
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+
 #home {
   padding: 240px;
   display:inline-block;

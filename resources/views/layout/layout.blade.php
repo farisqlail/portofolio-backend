@@ -48,11 +48,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kontak</a>
                     </li>
-                    <li class="nav-item">
-                        <span data-aos="zoom-in" data-aos-duration="3500" class="icon" onclick="setDarkMode()"
-                            id="darkBtn">
-                            🌓
-                        </span>
+                    <li class="nav-item" style="margin-top: -10px">
+                        <button class="icon" onclick="setDarkMode()" id="darkBtn">
+                            🌑
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -86,9 +85,7 @@
                 emoticon = '🌑';
                 localStorage.removeItem('theme');
             }
-
             document.getElementById('darkBtn').innerHTML = emoticon;
-
         }
     </script>
 </body>
