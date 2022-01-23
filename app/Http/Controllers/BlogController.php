@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BlogController extends Controller
 {
@@ -16,6 +20,13 @@ class BlogController extends Controller
         return view('blog.index');
     }
 
+    public function admin()
+    {
+        $blog = Blog::all();
+
+        return view('admin.blog.index', ['blog' => $blog]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -23,7 +34,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blog.create');
     }
 
     /**
@@ -34,7 +45,29 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make(request()->all(), [
+            'title' => 'required',
+            'link' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            dd($validator->errors());
+            return back()->withErrors($validator->errors());
+        } else {
+
+            Alert::success('Success', 'Blog berhasil ditambahkan');
+
+            $blog = new Blog();
+
+            $blog->title = $request->get('title');
+            $blog->link = $request->get('link');
+            $blog->deskripsi = $request->get('deskripsi'); ;
+            
+            $blog->save();
+
+            return redirect()->route('blog.admin');
+        }
     }
 
     /**
@@ -56,7 +89,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+
+        return view('admin.blog.edit', ['blog' => $blog]);
     }
 
     /**
@@ -68,7 +103,29 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make(request()->all(), [
+            'title' => 'required',
+            'link' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            dd($validator->errors());
+            return back()->withErrors($validator->errors());
+        } else {
+
+            Alert::success('Success', 'Blog berhasil ditambahkan');
+
+            $blog = Blog::findOrFail($id);
+
+            $blog->title = $request->get('title');
+            $blog->link = $request->get('link');
+            $blog->deskripsi = $request->get('deskripsi'); ;
+            
+            $blog->save();
+
+            return redirect()->route('blog.admin');
+        }
     }
 
     /**
@@ -79,6 +136,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+
+        $blog->delete();
+        return redirect()->route('blog.admin');
     }
 }

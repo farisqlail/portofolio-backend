@@ -23,5 +23,13 @@ Route::get('/kontak', function () {
     return view('contact');
 });
 
+Route::prefix('/faris/blog')->group(function () {
+    Route::get('/', [BlogController::class, 'admin'])->name('blog.admin');
+    Route::get('/faris/blog/create', [BlogController::class, 'create'])->name('blog.create');
+    Route::post('/faris/blog/create', [BlogController::class, 'store'])->name('blog.store');
+    Route::get('/faris/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+    Route::patch('/faris/blog/edit/{id}', [BlogController::class, 'update'])->name('blog.update');
+    Route::get('/faris/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/faris', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

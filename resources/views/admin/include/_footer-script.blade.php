@@ -16,6 +16,7 @@
 <script src="{{ asset('sb-admin/js/demo/chart-pie-demo.js') }}"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @include('sweetalert::alert')
 
 @stack('footer-scripts')
