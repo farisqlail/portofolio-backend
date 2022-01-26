@@ -40,16 +40,16 @@
             <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Beranda</a>
+                        <a class="nav-link {{'Beranda' == request()->segment(1) ? 'active' : ''}}" aria-current="page" href="{{ url('/') }}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
+                        <a class="nav-link {{'blog' == request()->segment(1) ? 'active' : ''}}" href="{{ route('blog.index') }}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('porto.index') }}">Portfolio</a>
+                        <a class="nav-link {{'portfolio' == request()->segment(1) ? 'active' : ''}}" href="{{ route('porto.index') }}">Portfolio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
+                    <li class="nav-item"> 
+                        <a class="nav-link {{'kontak' == request()->segment(1) ? 'active' : ''}}" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
                     <li class="nav-item" style="margin-top: -10px">
                         <button class="icon" onclick="setDarkMode()" id="darkBtn">
