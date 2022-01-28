@@ -26,7 +26,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('/daftar-admin') }}">
+        <a class="nav-link" href="{{ route('portfolio.admin') }}">
           <i class="fas fa-fw fa-brain"></i>
           <span>Portfolio</span></a>
       </li>

@@ -17,6 +17,7 @@
                   {{ $item->deskripsi }}
                 </p>
                 <a href="{{ $item->link }}" target="blank">Lihat Selengkapnya</a>
+                <br><br>
             @endforeach
         </section>
     </div>

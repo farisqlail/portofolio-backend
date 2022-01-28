@@ -32,4 +32,13 @@ Route::prefix('/faris/blog')->group(function () {
     Route::get('/faris/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
 });
 
+Route::prefix('/faris/portfolio')->group(function () {
+    Route::get('/', [PortfolioController::class, 'admin'])->name('portfolio.admin');
+    Route::get('/faris/portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
+    Route::post('/faris/portfolio/create', [PortfolioController::class, 'store'])->name('portfolio.store');
+    Route::get('/faris/portfolio/edit/{id}', [PortfolioController::class, 'edit'])->name('portfolio.edit');
+    Route::patch('/faris/portfolio/edit/{id}', [PortfolioController::class, 'update'])->name('portfolio.update');
+    Route::get('/faris/portfolio/delete/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.delete');
+});
+
 Route::get('/faris', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

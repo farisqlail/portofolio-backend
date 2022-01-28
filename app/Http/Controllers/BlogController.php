@@ -116,7 +116,7 @@ class BlogController extends Controller
             return back()->withErrors($validator->errors());
         } else {
 
-            Alert::success('Success', 'Blog berhasil ditambahkan');
+            Alert::success('Success', 'Blog berhasil diubah');
 
             $blog = Blog::findOrFail($id);
 
@@ -138,6 +138,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
+        Alert::success('Success', 'Blog berhasil dihapus');
+
         $blog = Blog::findOrFail($id);
 
         $blog->delete();
