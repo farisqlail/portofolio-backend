@@ -17,7 +17,7 @@
                 <p class="mt-3">
                     {{ $item->description }}
                 </p>
-                <a href="{{ $item->link }}">Lihat Selengkapnya</a>
+                <a href="{{ $item->link }}">Lihat Selengkapnya</a> <br>
             @endforeach
         </section>
     </div>
