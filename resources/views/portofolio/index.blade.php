@@ -17,6 +17,7 @@
                     {{ $item->description }}
                 </p>
                 <a href="{{ $item->link }}">Lihat Selengkapnya</a>
+                <br><br>
             @endforeach
         </section>
     </div>
