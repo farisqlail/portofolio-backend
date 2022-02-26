@@ -8,7 +8,7 @@
       </h2>
       <br /><br /> --}}
             @foreach ($portfolio as $item)
-                <br>
+                <br><br>
                 <h3>
                     {{ $item->title }}
                 </h3>
