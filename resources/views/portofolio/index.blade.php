@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-
     <div class="container">
         <section id="blog">
             {{-- <h2>
@@ -9,7 +8,7 @@
       </h2>
       <br /><br /> --}}
             @foreach ($portfolio as $item)
-
+                <br>
                 <h3>
                     {{ $item->title }}
                 </h3>
@@ -17,9 +16,8 @@
                 <p class="mt-3">
                     {{ $item->description }}
                 </p>
-                <a href="{{ $item->link }}">Lihat Selengkapnya</a> <br>
+                <a href="{{ $item->link }}">Lihat Selengkapnya</a>
             @endforeach
         </section>
     </div>
-
 @endsection
