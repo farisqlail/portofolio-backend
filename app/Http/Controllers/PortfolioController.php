@@ -44,10 +44,7 @@ class PortfolioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        // return view('admin.portfolio.create');
-    }
+    public function create(){}
 
     /**
      * Store a newly created resource in storage.
@@ -96,10 +93,7 @@ class PortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id){}
 
     /**
      * Show the form for editing the specified resource.
@@ -107,12 +101,7 @@ class PortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        // $portfolio = Portfolio::findOrFail($id);
-
-        // return view('admin.portfolio.edit', ['portfolio' => $portfolio]);
-    }
+    public function edit($id){}
 
     /**
      * Update the specified resource in storage.
@@ -172,7 +161,7 @@ class PortfolioController extends Controller
         $reponse = [
             'success' => true,
             'message' => 'Portfolio berhasil dihapus',
-            'data' => $portfolio
+            'data' => []
         ];
 
         return Response()->json($reponse, 200);

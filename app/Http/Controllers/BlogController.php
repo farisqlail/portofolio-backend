@@ -37,7 +37,7 @@ class BlogController extends Controller
             'message' => 'Data found!',
             'data' => $blog
         ];
-        // return view('admin.blog.index', ['blog' => $blog]);
+        
         return Response()->json($response, 200);
     }
 
@@ -46,10 +46,7 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('admin.blog.create');
-    }
+    public function create(){}
 
     /**
      * Store a newly created resource in storage.
@@ -85,7 +82,7 @@ class BlogController extends Controller
                 'message' => 'Blog berhasil ditambahkan',
                 'data' => $blog
             ];
-            // return redirect()->route('blog.admin');
+        
             return Response()->json($response, 200);
         }
     }
@@ -96,10 +93,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id){}
 
     /**
      * Show the form for editing the specified resource.
@@ -107,12 +101,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $blog = Blog::findOrFail($id);
-
-        return view('admin.blog.edit', ['blog' => $blog]);
-    }
+    public function edit($id){}
 
     /**
      * Update the specified resource in storage.
@@ -149,7 +138,7 @@ class BlogController extends Controller
                 'message' => 'Blog berhasil diubah',
                 'data' => $blog
             ];
-            // return redirect()->route('blog.admin');
+            
             return Response()->json($response, 200);
         }
     }
@@ -174,6 +163,5 @@ class BlogController extends Controller
         ];
 
         return Response()->json($response, 200);
-        // return redirect()->route('blog.admin');
     }
 }

@@ -15,7 +15,7 @@ Route::prefix('/blogs')->group(function () {
     Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 });
 
-Route::prefix('/portfolio')->group(function () {
+Route::prefix('/portfolios')->group(function () {
     Route::get('/', [PortfolioController::class, 'index'])->name('porto.index');
 });
 
@@ -30,11 +30,11 @@ Route::prefix('/blog')->group(function () {
     Route::get('/delete/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
 });
 
-Route::prefix('/faris/portfolio')->group(function () {
+Route::prefix('/portfolio')->group(function () {
     Route::get('/', [PortfolioController::class, 'admin'])->name('portfolio.admin');
-    Route::post('/faris/portfolio/create', [PortfolioController::class, 'store'])->name('portfolio.store');
-    Route::patch('/faris/portfolio/edit/{id}', [PortfolioController::class, 'update'])->name('portfolio.update');
-    Route::get('/faris/portfolio/delete/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.delete');
+    Route::post('/create', [PortfolioController::class, 'store'])->name('portfolio.store');
+    Route::patch('/edit/{id}', [PortfolioController::class, 'update'])->name('portfolio.update');
+    Route::get('/delete/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.delete');
 });
 
 Route::get('/faris', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
