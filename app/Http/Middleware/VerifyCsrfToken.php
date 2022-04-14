@@ -11,7 +11,11 @@ class VerifyCsrfToken extends Middleware
      *
      * @var array<int, string>
      */
+    protected $addHttpCookie = true;
+
     protected $except = [
-        //
+        'http://127.0.0.1:8000/blog/create',
+        'http://127.0.0.1:8000/blog/edit/*',
+        'http://127.0.0.1:8000/blog/delete/*',
     ];
 }

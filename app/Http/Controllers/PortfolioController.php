@@ -17,15 +17,26 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolio = Portfolio::all();
+        $reponse = [
+            'success' => true,
+            'message' => 'Data found!',
+            'data' => $portfolio
+        ];
 
-        return view('portofolio.index', ['portfolio' => $portfolio]);
+        return Response()->json($reponse, 200);
     }
 
     public function admin(){
 
         $portfolio = Portfolio::all();
+        $reponse = [
+            'success' => true,
+            'message' => 'Data found!',
+            'data' => $portfolio
+        ];
 
-        return view('admin.portfolio.index', ['portfolio' => $portfolio]);
+        return Response()->json($reponse, 200);
+        
     }
 
     /**
@@ -35,7 +46,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('admin.portfolio.create');
+        // return view('admin.portfolio.create');
     }
 
     /**
@@ -69,7 +80,13 @@ class PortfolioController extends Controller
             
             $portfolio->save();
 
-            return redirect()->route('portfolio.admin');
+            $reponse = [
+                'success' => true,
+                'message' => 'Portfolio berhasil ditambahkan',
+                'data' => $portfolio
+            ];
+            
+            return Response()->json($reponse, 200);
         }
     }
 
@@ -92,9 +109,9 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-        $portfolio = Portfolio::findOrFail($id);
+        // $portfolio = Portfolio::findOrFail($id);
 
-        return view('admin.portfolio.edit', ['portfolio' => $portfolio]);
+        // return view('admin.portfolio.edit', ['portfolio' => $portfolio]);
     }
 
     /**
@@ -129,7 +146,13 @@ class PortfolioController extends Controller
             
             $portfolio->save();
 
-            return redirect()->route('portfolio.admin');
+            $reponse = [
+                'success' => true,
+                'message' => 'Portfolio berhasil diubah',
+                'data' => $portfolio
+            ];
+            
+            return Response()->json($reponse, 200);
         }
     }
 
@@ -146,6 +169,12 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::findOrFail($id);
         $portfolio->delete();
 
-        return redirect()->route('portfolio.admin');  
+        $reponse = [
+            'success' => true,
+            'message' => 'Portfolio berhasil dihapus',
+            'data' => $portfolio
+        ];
+
+        return Response()->json($reponse, 200);
     }
 }

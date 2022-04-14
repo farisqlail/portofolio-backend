@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -19,14 +20,25 @@ class BlogController extends Controller
     {
         $blog = Blog::all();
 
-        return view('blog.index', ['blog' => $blog]);
+        $response = [
+            'success' => true,
+            'message' => 'Data found!',
+            'data' => $blog
+        ];
+        // return view('blog.index', ['blog' => $blog]);
+        return Response()->json($response, 200);
     }
 
     public function admin()
     {
         $blog = Blog::all();
-
-        return view('admin.blog.index', ['blog' => $blog]);
+        $response = [
+            'success' => true,
+            'message' => 'Data found!',
+            'data' => $blog
+        ];
+        // return view('admin.blog.index', ['blog' => $blog]);
+        return Response()->json($response, 200);
     }
 
     /**
@@ -68,7 +80,13 @@ class BlogController extends Controller
             
             $blog->save();
 
-            return redirect()->route('blog.admin');
+            $response = [
+                'success' => true,
+                'message' => 'Blog berhasil ditambahkan',
+                'data' => $blog
+            ];
+            // return redirect()->route('blog.admin');
+            return Response()->json($response, 200);
         }
     }
 
@@ -126,7 +144,13 @@ class BlogController extends Controller
             
             $blog->save();
 
-            return redirect()->route('blog.admin');
+            $response = [
+                'success' => true,
+                'message' => 'Blog berhasil diubah',
+                'data' => $blog
+            ];
+            // return redirect()->route('blog.admin');
+            return Response()->json($response, 200);
         }
     }
 
@@ -141,8 +165,15 @@ class BlogController extends Controller
         Alert::success('Success', 'Blog berhasil dihapus');
 
         $blog = Blog::findOrFail($id);
-
         $blog->delete();
-        return redirect()->route('blog.admin');
+
+        $response = [
+            'success' => true,
+            'message' => 'Blog berhasil dihapus',
+            'data' => []
+        ];
+
+        return Response()->json($response, 200);
+        // return redirect()->route('blog.admin');
     }
 }
